@@ -9,7 +9,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       -webkit-tap-highlight-color: transparent;
       user-select: none;
     }
@@ -71,9 +71,7 @@
       padding-bottom: 4px;
       scrollbar-width: none;
     }
-    .sections-bar::-webkit-scrollbar {
-      display: none;
-    }
+    .sections-bar::-webkit-scrollbar { display: none; }
     .sec-tab {
       background: #334155;
       color: #94a3b8;
@@ -111,9 +109,7 @@
       margin-bottom: 8px;
       gap: 8px;
     }
-    .title-group {
-      flex: 1;
-    }
+    .title-group { flex: 1; }
     .idiom-title {
       font-size: 1.15rem;
       font-weight: 800;
@@ -144,10 +140,6 @@
       font-size: 1.15rem;
       cursor: pointer;
       flex-shrink: 0;
-    }
-    .btn-audio:active {
-      transform: scale(0.92);
-      background: #0369a1;
     }
 
     .meaning-box {
@@ -231,7 +223,7 @@
   <header>
     <div class="header-top">
       <h1>British Idioms Master</h1>
-      <span class="badge-count" id="countBadge">1,000+ Idioms</span>
+      <span class="badge-count" id="countBadge">Loading...</span>
     </div>
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="Search British idioms or meanings..." oninput="filterIdioms()" />
@@ -252,7 +244,6 @@
   </div>
 
   <script>
-    // --- British Received Pronunciation (RP) Speech Synthesis ---
     function speakBritish(text) {
       if (!('speechSynthesis' in window)) return;
       window.speechSynthesis.cancel();
@@ -271,217 +262,23 @@
       window.speechSynthesis.onvoiceschanged = () => {};
     }
 
-    // --- Curated British Expressions with 8-9 Complete Examples ---
-    const CORE_VAULT = [
-      {
-        idiom: "Bob's your uncle",
-        sec: "everyday",
-        secName: "Everyday Slang",
-        meaning: "Used to declare that something will be easily and quickly achieved, or that everything is complete and settled (roughly equivalent to 'there you have it!').",
-        examples: [
-          "Just plug in the charging cable, flip the mains switch, and Bob's your uncle, it turns on.",
-          "Type your registration code, tap the green confirm button, and Bob's your uncle.",
-          "Add two spoons of sugar, give the tea a proper stir, and Bob's your uncle.",
-          "Download the APK, hit install on your mobile device, and Bob's your uncle.",
-          "Follow this road to the roundabout, take the first exit, and Bob's your uncle, you have arrived.",
-          "Save the file directly to your desktop, restart the program, and Bob's your uncle.",
-          "Slip the SIM card into the second tray, turn the phone on, and Bob's your uncle.",
-          "Mix the dry spices first, simmer the gravy for twenty minutes, and Bob's your uncle.",
-          "Submit your online examination form before midday, and Bob's your uncle, you are registered."
-        ]
-      },
-      {
-        idiom: "Throw a spanner in the works",
-        sec: "work",
-        secName: "Work & Ambition",
-        meaning: "To disrupt, hinder, or introduce an unexpected obstacle that ruins or prevents a plan or system from operating smoothly.",
-        examples: [
-          "The unexpected railway strike really threw a spanner in the works for our London visit.",
-          "He forgot his hall ticket at home, which threw a spanner in the works right before the exam.",
-          "A sudden Wi-Fi blackout threw a spanner in the works while the class was streaming.",
-          "Heavy torrential rain on match day always throws a proper spanner in the works.",
-          "The sudden withdrawal of state funding threw a huge spanner in the works for the project.",
-          "Her sudden resignation threw a spanner in the works of the entire research team.",
-          "A small missing screw threw a complete spanner in the works of the machinery.",
-          "His negative remarks threw a spanner in the works during our contract negotiations.",
-          "An early snowfall threw a spanner in the works for local transport across the valley."
-        ]
-      },
-      {
-        idiom: "Not my cup of tea",
-        sec: "social",
-        secName: "Social & Life",
-        meaning: "Something that does not align with one's personal tastes, interests, or preferences.",
-        examples: [
-          "Historical fantasy novels are popular, but they are simply not my cup of tea.",
-          "I accompanied him to the cricket ground, but test matches are truly not my cup of tea.",
-          "Modern abstract architecture is not my cup of tea; I prefer classical brick buildings.",
-          "Drinking sugary carbonated drinks was never my cup of tea; I prefer plain spring water.",
-          "He offered me a pass to the rock gig, but loud concerts are not my cup of tea.",
-          "Waking up at five in the freezing morning is definitely not my cup of tea.",
-          "Working a monotonous nine-to-five desk job is just not his cup of tea.",
-          "Fiery curries are great, but heavy sweet puddings are not my cup of tea.",
-          "Arguing on social media platforms is completely not my cup of tea."
-        ]
-      },
-      {
-        idiom: "Cost an arm and a leg",
-        sec: "work",
-        secName: "Work & Ambition",
-        meaning: "Extremely expensive; requiring an exorbitant or unreasonable amount of money.",
-        examples: [
-          "Imported electronics and flagship laptops often cost an absolute arm and a leg.",
-          "Renting a flat in central London will cost you an arm and a leg nowadays.",
-          "Getting high-speed optical fiber laid to remote mountain villages costs an arm and a leg.",
-          "Flight tickets booked during the national holiday season cost an arm and a leg.",
-          "Replacing an cracked AMOLED screen on that handset costs an arm and a leg.",
-          "Dining at that rooftop restaurant in town costs an arm and a leg.",
-          "Bespoke tailored woolen suits will cost an arm and a leg to fabricate.",
-          "Repairing an imported motorcycle engine can cost an arm and a leg in spare parts.",
-          "Private medical consultations in large metropolitan hospitals cost an arm and a leg."
-        ]
-      },
-      {
-        idiom: "Chuffed to bits",
-        sec: "wit",
-        secName: "Wit & Banter",
-        meaning: "Deeply pleased, thoroughly delighted, and extraordinarily proud of an achievement or fortunate event.",
-        examples: [
-          "He secured the top score in the history finals and was absolutely chuffed to bits.",
-          "I was chuffed to bits when my mobile APK compiled without a single compilation error.",
-          "The entire village cricket squad was chuffed to bits after lifting the championship cup.",
-          "She was chuffed to bits with the fountain pen her father brought back from England.",
-          "When the professor praised my essay structure, I was genuinely chuffed to bits.",
-          "My brother was chuffed to bits to receive his college appointment letter.",
-          "We were chuffed to bits when the power supply was restored ahead of schedule.",
-          "The engineering team was chuffed to bits after the application launch succeeded.",
-          "He was chuffed to bits to locate a rare original edition of the historical journal."
-        ]
-      },
-      {
-        idiom: "Under the weather",
-        sec: "weather",
-        secName: "Weather & Mood",
-        meaning: "Feeling slightly unwell, fatigued, low in energy, or mildly indisposed.",
-        examples: [
-          "I will not be able to attend the morning tutorial today as I am feeling rather under the weather.",
-          "He looked pale and admitted he had been feeling under the weather since Friday.",
-          "A warm cup of herbal kahwa always helps whenever you feel under the weather.",
-          "She stayed in bed with a hot water bottle because she was under the weather.",
-          "The teacher noticed several pupils were under the weather following the cold snap.",
-          "I was feeling slightly under the weather, so I decided against going out for cricket practice.",
-          "After travelling continuously for twelve hours, he felt distinctly under the weather.",
-          "Don't worry about the missed lecture; get plenty of rest while you are under the weather.",
-          "She skipped the evening dinner party because she felt a bit under the weather."
-        ]
-      },
-      {
-        idiom: "Barking up the wrong tree",
-        sec: "wit",
-        secName: "Wit & Banter",
-        meaning: "Pursuing an incorrect line of inquiry, making a misguided assumption, or blaming the wrong source.",
-        examples: [
-          "If you believe I misplaced your notebook, you are barking up the wrong tree entirely.",
-          "The investigating officers were barking up the wrong tree until fresh evidence surfaced.",
-          "He thought the broadband router was malfunctioning, but he was barking up the wrong tree.",
-          "Blaming the junior assistant for the accounting error is barking up the wrong tree.",
-          "You are barking up the wrong tree if you expect him to lend you his prized bike.",
-          "The programmer searched the styling rules, barking up the wrong tree when the bug was in the logic.",
-          "If you want advice on local farming, asking a city architect is barking up the wrong tree.",
-          "The detectives admitted they had been barking up the wrong tree during the initial inquiry.",
-          "Accusing the goalkeeper for the defeat was barking up the wrong tree; the defense had failed."
-        ]
-      },
-      {
-        idiom: "Full of beans",
-        sec: "everyday",
-        secName: "Everyday Slang",
-        meaning: "Possessing an abundance of lively energy, enthusiasm, high spirits, and physical vitality.",
-        examples: [
-          "Despite having slept only five hours, Faizan arrived at college completely full of beans.",
-          "The young schoolchildren were full of beans even after a long afternoon trek.",
-          "Our dog is always full of beans first thing in the morning when the gate opens.",
-          "The young fast bowler looked full of beans throughout his opening spell.",
-          "A strong cup of freshly brewed tea left him full of beans for the rest of the day.",
-          "She sounded extraordinarily full of beans on the telephone after passing her interview.",
-          "The entire sports club was full of beans ahead of the annual district tournament.",
-          "You look remarkably full of beans today; what cheerful news have you received?",
-          "Grandfather walked five miles through the pine forest and remained full of beans."
-        ]
-      }
-    ];
-
-    // --- Dynamic Scaler (Extends Library to 1,000+ Authentic British Expressions) ---
-    const VOCAB_BANK = [
-      { id: "A penny for your thoughts", m: "A friendly inquiry asking someone what they are thinking about during a moment of quiet reflection.", s: "social", sn: "Social & Life" },
-      { id: "Take the biscuit", m: "To be particularly surprising, annoying, or objectionable beyond normal limits.", s: "wit", sn: "Wit & Banter" },
-      { id: "Spill the beans", m: "To reveal secret or confidential information prematurely or indiscreetly.", s: "social", sn: "Social & Life" },
-      { id: "Bite the bullet", m: "To confront a daunting, painful, or inevitable situation with courage and resolve.", s: "work", sn: "Work & Ambition" },
-      { id: "Over the moon", m: "Extremely delighted, elated, and thrilled about a fortunate turn of events.", s: "everyday", sn: "Everyday Slang" },
-      { id: "A proper dog's dinner", m: "A complete and utter mess, or an extraordinarily untidy and botched attempt.", s: "wit", sn: "Wit & Banter" },
-      { id: "Flog a dead horse", m: "To waste time and effort attempting to alter or revive a situation that cannot be changed.", s: "work", sn: "Work & Ambition" },
-      { id: "Keep a stiff upper lip", m: "To display courage, stoicism, and emotional composure in the face of great adversity.", s: "social", sn: "Social & Life" },
-      { id: "It's brass monkeys outside", m: "Used in Britain to describe bitterly freezing and intensely cold weather.", s: "weather", sn: "Weather & Mood" },
-      { id: "Don't get your knickers in a twist", m: "An admonition to calm down and refrain from becoming upset over a minor trifle.", s: "wit", sn: "Wit & Banter" },
-      { id: "All mouth and no trousers", m: "Someone who makes brave declarations or boastful threats but fails to act on them.", s: "wit", sn: "Wit & Banter" },
-      { id: "Have a proper chinwag", m: "To engage in a long, leisurely, and informal conversation with a good friend.", s: "social", sn: "Social & Life" },
-      { id: "Lost the plot", m: "To have become irrational, confused, or completely incapable of reasoned judgment.", s: "wit", sn: "Wit & Banter" },
-      { id: "Piece of cake", m: "An activity, task, or challenge that is exceptionally easy to accomplish.", s: "everyday", sn: "Everyday Slang" },
-      { id: "Call it a day", m: "To conclude one's work on an activity for the remainder of the evening.", s: "work", sn: "Work & Ambition" },
-      { id: "Curiosity killed the cat", m: "A reminder that pryingly investigating things that do not concern you can cause trouble.", s: "social", sn: "Social & Life" },
-      { id: "See eye to eye", m: "To be in complete harmony and agreement regarding an opinion or principle.", s: "work", sn: "Work & Ambition" },
-      { id: "Cut corners", m: "To execute a task poorly or carelessly in order to save money, effort, or time.", s: "work", sn: "Work & Ambition" },
-      { id: "Once in a blue moon", m: "An event or occurrence that happens extraordinarily rarely or almost never.", s: "everyday", sn: "Everyday Slang" },
-      { id: "Burn the midnight oil", m: "To study or labor late into the quiet hours of the night to complete work.", s: "work", sn: "Work & Ambition" },
-      { id: "Cold feet", m: "A sudden sensation of panic, hesitation, or nervousness prior to a major commitment.", s: "social", sn: "Social & Life" },
-      { id: "Hit the nail on the head", m: "To describe the exact cause of a problem or articulate an absolute truth.", s: "wit", sn: "Wit & Banter" },
-      { id: "Penny-pinching", m: "Being excessively frugal and reluctant to spend even necessary funds.", s: "work", sn: "Work & Ambition" },
-      { id: "Face the music", m: "To accept the unpleasant criticisms or consequences of one's missteps.", s: "social", sn: "Social & Life" },
-      { id: "Raining cats and dogs", m: "Pouring down with torrential, non-stop, and heavy rain.", s: "weather", sn: "Weather & Mood" },
-      { id: "Keep your chin up", m: "Maintaining a hopeful and cheerful outlook despite experiencing hardship.", s: "social", sn: "Social & Life" },
-      { id: "Best of both worlds", m: "A favorable position where one enjoys the advantages of two separate opportunities.", s: "everyday", sn: "Everyday Slang" },
-      { id: "Speak of the devil", m: "Remarked when the very individual being discussed unexpectedly arrives.", s: "social", sn: "Social & Life" },
-      { id: "Back to the drawing board", m: "Starting a project or design from the beginning after a previous plan fails.", s: "work", sn: "Work & Ambition" }
-    ];
-    function buildIdiomDatabase() {
-      const db = [...CORE_VAULT];
-      const contextPrefixes = [
-        "In British conversational English, people often observe that",
-        "During serious discussions at university, the tutor stated that",
-        "At the local village council, members remarked that",
-        "While having tea by the fireplace, my elder remarked that",
-        "In classical British journalism, reporters frequently write that",
-        "During winter days across the valley, people often say that",
-        "In administrative and civil service reviews, one must recognize that",
-        "At the sports pavilion following the final match, coaches agreed that",
-        "When planning long-term projects, experienced craftsmen advise that"
-      ];
-
-      for (let i = 0; i < 992; i++) {
-        const item = VOCAB_BANK[i % VOCAB_BANK.length];
-        const numSuffix = i >= VOCAB_BANK.length ? ` (Var. ${Math.floor(i / VOCAB_BANK.length) + 1})` : '';
-        const title = item.id + numSuffix;
-
-        const examples = [];
-        for (let j = 0; j < 9; j++) {
-          examples.push(`${contextPrefixes[j]} "${title}" captures the situation with precision.`);
-        }
-
-        db.push({
-          idiom: title,
-          sec: item.s,
-          secName: item.sn,
-          meaning: item.m,
-          examples: examples
-        });
-      }
-      return db;
-    }
-
-    const ALL_IDIOMS = buildIdiomDatabase();
-    let filteredIdioms = [...ALL_IDIOMS];
-    let currentLimit = 15;
+    let allIdioms = [];
+    let filteredIdioms = [];
+    let currentLimit = 10;
     let selectedSection = 'all';
+
+    // Fetch the external dictionary file
+    async function loadDictionary() {
+      try {
+        const response = await fetch('idioms.json');
+        allIdioms = await response.json();
+      } catch (e) {
+        console.error("Could not load idioms.json, using fallback", e);
+      }
+      filteredIdioms = [...allIdioms];
+      document.getElementById('countBadge').innerText = `${allIdioms.length} Idioms`;
+      renderList();
+    }
 
     function renderList() {
       const container = document.getElementById('idiomContainer');
@@ -489,7 +286,7 @@
 
       const subset = filteredIdioms.slice(0, currentLimit);
       if (subset.length === 0) {
-        container.innerHTML = `<div style="text-align:center; padding:50px 10px; color:#94a3b8;">No matching British expressions found in this section.</div>`;
+        container.innerHTML = `<div style="text-align:center; padding:50px 10px; color:#94a3b8;">No matching British expressions found.</div>`;
         document.getElementById('loadMoreBtn').style.display = 'none';
         return;
       }
@@ -510,9 +307,9 @@
           <div class="card-head">
             <div class="title-group">
               <div class="idiom-title">${item.idiom}</div>
-              <span class="idiom-section-tag">${item.secName}</span>
+              <span class="idiom-section-tag">${item.secName || item.sec}</span>
             </div>
-            <button class="btn-audio" onclick="speakBritish('${item.idiom.replace(/'/g, "\\'")}')" title="Pronounce Idiom in British RP">🔊</button>
+            <button class="btn-audio" onclick="speakBritish('${item.idiom.replace(/'/g, "\\'")}')" title="Pronounce">🔊</button>
           </div>
           <div class="meaning-box">
             <div class="meaning-title">British Meaning & Definition</div>
@@ -527,17 +324,16 @@
       });
 
       document.getElementById('loadMoreBtn').style.display = currentLimit >= filteredIdioms.length ? 'none' : 'block';
-      document.getElementById('countBadge').innerText = `${filteredIdioms.length.toLocaleString()} Idioms`;
     }
 
     function filterIdioms() {
       const query = document.getElementById('searchInput').value.toLowerCase().trim();
-      filteredIdioms = ALL_IDIOMS.filter(item => {
+      filteredIdioms = allIdioms.filter(item => {
         const matchesQuery = item.idiom.toLowerCase().includes(query) || item.meaning.toLowerCase().includes(query);
         const matchesSection = (selectedSection === 'all') || (item.sec === selectedSection);
         return matchesQuery && matchesSection;
       });
-      currentLimit = 15;
+      currentLimit = 10;
       renderList();
     }
 
@@ -549,12 +345,11 @@
     }
 
     function loadMore() {
-      currentLimit += 15;
+      currentLimit += 10;
       renderList();
     }
 
-    renderList();
+    loadDictionary();
   </script>
 </body>
 </html>
-    
