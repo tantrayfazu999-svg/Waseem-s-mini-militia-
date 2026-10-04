@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir -p www
           cp index.html www/
-          cp idioms.json www/
+          [ -f idioms.json ] && cp idioms.json www/ || echo "idioms.json not found, skipping"
 
       - name: Install Dependencies
         run: |
