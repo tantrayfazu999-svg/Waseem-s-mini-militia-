@@ -1,0 +1,138 @@
+[
+  {
+    "idiom": "Bob's your uncle",
+    "sec": "everyday",
+    "secName": "Everyday Slang",
+    "meaning": "Used to express that an action is straightforward and the desired result will be achieved quickly.",
+    "examples": [
+      "Just plug the lead in, hit the power button, and Bob's your uncle.",
+      "Add two spoons of sugar, stir well, and Bob's your uncle.",
+      "Enter your registration number, tap submit, and Bob's your uncle.",
+      "Follow this road to the roundabout, take the first exit, and Bob's your uncle.",
+      "Download the installer, click run, and Bob's your uncle.",
+      "Put the dough in the oven for twenty minutes, and Bob's your uncle.",
+      "Restart your phone after updating, and Bob's your uncle.",
+      "Sign the contract at the bottom, and Bob's your uncle, it's official.",
+      "Clip the buckle into place, and Bob's your uncle, you're secure."
+    ]
+  },
+  {
+    "idiom": "Throw a spanner in the works",
+    "sec": "work",
+    "secName": "Work & Ambition",
+    "meaning": "To disrupt, prevent, or complicate a plan or process unexpectedly.",
+    "examples": [
+      "The rail strike threw a spanner in the works for our London visit.",
+      "Losing my notes right before the tutorial threw a spanner in the works.",
+      "A sudden power cut threw a spanner in the works while compiling.",
+      "Rain on sports day always throws a spanner in the works.",
+      "His unexpected resignation threw a spanner in the works of the team.",
+      "The cancelled flight threw a spanner in the works of our holiday.",
+      "A software glitch threw a spanner in the works during testing.",
+      "Budget cuts threw a major spanner in the works for the laboratory.",
+      "Her sudden illness threw a spanner in the works for the theatre production."
+    ]
+  },
+  {
+    "idiom": "Chuffed to bits",
+    "sec": "wit",
+    "secName": "Wit & Banter",
+    "meaning": "Extremely pleased, proud, and thoroughly delighted.",
+    "examples": [
+      "He received his exam results and was absolutely chuffed to bits.",
+      "I was chuffed to bits when our application was accepted.",
+      "The cricket team was chuffed to bits after winning the trophy.",
+      "She was chuffed to bits with the present her brother picked out.",
+      "The tutor praised his historical essay, leaving him chuffed to bits.",
+      "We were chuffed to bits with how the new house turned out.",
+      "He was chuffed to bits to find an authentic first edition book.",
+      "The coach was chuffed to bits with the squad's performance.",
+      "My father was chuffed to bits to receive his long-service badge."
+    ]
+  },
+  {
+    "idiom": "Not my cup of tea",
+    "sec": "social",
+    "secName": "Social & Life",
+    "meaning": "Not aligned with one's personal tastes, interests, or preferences.",
+    "examples": [
+      "Historical fiction is fine, but it is not really my cup of tea.",
+      "I accompanied him to the match, but golf is not my cup of tea.",
+      "Heavy metal music has never been my cup of tea.",
+      "Waking up at dawn for morning runs is not my cup of tea.",
+      "Spicy meals are great, but sweet desserts are not my cup of tea.",
+      "Working an office desk job is simply not his cup of tea.",
+      "Going to noisy crowded clubs is not her cup of tea.",
+      "Documentaries about finance are definitely not my cup of tea.",
+      "Social media debates are not my cup of tea."
+    ]
+  },
+  {
+    "idiom": "Cost an arm and a leg",
+    "sec": "work",
+    "secName": "Work & Ambition",
+    "meaning": "Extremely expensive; demanding an exorbitant amount of money.",
+    "examples": [
+      "Flagship smartphones cost an absolute arm and a leg nowadays.",
+      "Renting a flat in central London will cost an arm and a leg.",
+      "Getting high-speed broadband to remote cabins costs an arm and a leg.",
+      "Flight tickets during holiday periods cost an arm and a leg.",
+      "Repairing the engine on an imported car costs an arm and a leg.",
+      "Eating out at five-star restaurants costs an arm and a leg.",
+      "Tailor-made wool suits often cost an arm and a leg.",
+      "Private hospital treatment without insurance costs an arm and a leg.",
+      "Replacing a cracked laptop screen can cost an arm and a leg."
+    ]
+  },
+  {
+    "idiom": "Barking up the wrong tree",
+    "sec": "wit",
+    "secName": "Wit & Banter",
+    "meaning": "Making a false assumption, following a mistaken line of thought, or accusing the wrong person.",
+    "examples": [
+      "If you think I broke the window, you are barking up the wrong tree.",
+      "The investigators were barking up the wrong tree until fresh clues emerged.",
+      "He blamed the hardware, but he was barking up the wrong tree—it was software.",
+      "Asking a history major for advanced calculus help is barking up the wrong tree.",
+      "You are barking up the wrong tree if you expect him to lend you his car.",
+      "The police quickly realized they had been barking up the wrong tree.",
+      "Blaming the goalkeeper for that goal is barking up the wrong tree.",
+      "She was barking up the wrong tree when assuming he was upset with her.",
+      "He searched the styling rules, barking up the wrong tree entirely."
+    ]
+  },
+  {
+    "idiom": "Under the weather",
+    "sec": "weather",
+    "secName": "Weather & Mood",
+    "meaning": "Feeling slightly ill, fatigued, or low in physical energy.",
+    "examples": [
+      "I cannot attend the tutorial today as I am feeling under the weather.",
+      "He looked pale and admitted he had been under the weather all morning.",
+      "A warm cup of herbal tea helps whenever you are under the weather.",
+      "She stayed home with a hot water bottle because she felt under the weather.",
+      "The tutor noticed several students were under the weather after the storm.",
+      "I was feeling under the weather, so I skipped cricket practice.",
+      "Travelling twelve hours on the coach left him feeling under the weather.",
+      "Rest well and stay hydrated while you are under the weather.",
+      "He sounded a bit under the weather when we spoke on the phone."
+    ]
+  },
+  {
+    "idiom": "Full of beans",
+    "sec": "everyday",
+    "secName": "Everyday Slang",
+    "meaning": "Bursting with lively energy, enthusiasm, and high spirits.",
+    "examples": [
+      "Despite sleeping only five hours, he arrived at college full of beans.",
+      "The schoolchildren were full of beans even after the long walk.",
+      "Our dog is always full of beans when let out into the garden.",
+      "The young bowler was full of beans during his opening overs.",
+      "A cup of strong black tea left him full of beans.",
+      "She sounded full of beans after receiving her promotion news.",
+      "The squad looked full of beans ahead of the tournament opener.",
+      "You look full of beans today; what cheerful news did you get?",
+      "Grandfather walked three miles and remained completely full of beans."
+    ]
+  }
+]
