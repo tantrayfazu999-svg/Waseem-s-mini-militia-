@@ -1,6 +1,14 @@
 {
-  "appId": "com.blighty.idioms",
-  "appName": "Blighty British Idioms",
-  "webDir": "www",
-  "bundledWebRuntime": false
+  "name": "blighty-british-idioms",
+  "version": "1.0.0",
+  "description": "British English Idioms Vault with Audio & Examples",
+  "main": "index.html",
+  "scripts": {},
+  "dependencies": {
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/android": "^6.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0"
+  }
 }
